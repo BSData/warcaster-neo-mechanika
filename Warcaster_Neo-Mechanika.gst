@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="6e64-0ab9-a430-a976" name="Warcaster: Neo-Mechanika" revision="2" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="6e64-0ab9-a430-a976" name="Warcaster: Neo-Mechanika" revision="4" battleScribeVersion="2.03" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <costTypes>
-    <costType id="ecbb-d452-36d4-0214" name="Weapon Points" defaultCostLimit="-1.0"/>
+    <costType id="ecbb-d452-36d4-0214" name="Weapon Points" defaultCostLimit="-1.0" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType id="5643-55ad-cf84-ac2a" name="Solo">
@@ -576,7 +576,7 @@
           </constraints>
           <rules>
             <rule id="7ea2-5e9c-9675-53cc" name="-Cypher- Momentum Calibrator" hidden="false">
-              <description>Overdrive: Target a friendly warjack. When the warjack hits a model with an equal or smaller base with a melee attack, before damage is rolled, the model hit is slammed directly away from the warjack. Roll a number of action dice equal to the STR of the warjack. For every strike rolled, move the model hit 1&quot;. Collateral damage is equal tot he STR of the attacking warjack. This card expires at the end of this turn.</description>
+              <description>Overdrive: Target a friendly warjack. When the warjack hits a model with an equal or smaller base with a melee attack, before damage is rolled, the model hit is slammed directly away from the warjack. Roll a number of action dice equal to the STR of the warjack. For every strike rolled, move the model hit 1&quot;. Collateral damage is equal to the STR of the attacking warjack. This card expires at the end of this turn.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -592,7 +592,7 @@
           </constraints>
           <rules>
             <rule id="fb67-0a2a-9fa3-27ce" name="-Cypher- Kinetic Accelerator" hidden="false">
-              <description>Overdrive: Target a friendly warjack. The warjack gains +2 SPD and the Flight special rule. Ascension Catalyst expires at the end of this turn.</description>
+              <description>Overdrive: Target a friendly warjack. When this warjack makes a melee attack during its activation, make a melee attack roll against each enemy model within the weapon&apos;s RNG. Models hit suffer the full effects and damage of the attack they were hit with. Kinetic Accelerator expires at the end of this turn.</description>
             </rule>
           </rules>
           <categoryLinks>
@@ -673,7 +673,7 @@
       <description>During its activation, this squad can spike to ignore cover and Stealth for the rest of its activation.</description>
     </rule>
     <rule id="2cb7-ba4d-ce4d-4e27" name="Reflex Accelerator (Charge)" hidden="false">
-      <description>When this model makes its attacks during its activation while it is charged, it can attack with both its weapons.</description>
+      <description>When this model makes its attacks during its activation while it is charged, it can attack with all its weapons.</description>
     </rule>
     <rule id="3ed5-a2a6-44a7-9c1d" name="Arc Relay (12)" hidden="false">
       <description>This model can channel Fury Cyphers. A Fury Cypher channeled through this model is RNG 12.</description>
@@ -688,7 +688,7 @@
       <description>While this model is charged, Fury Cyphers channeled through it gain +5 RNG.</description>
     </rule>
     <rule id="c9e6-a3b3-fe05-7295" name="Realignment Codex (Spike)" hidden="false">
-      <description>Once per activation, this unit can spike to use Realignment Codex. When it does so, youcan clear any amount of Arc from one friendly unit within 10&quot; of this model or charge one unit with any amount of Arc up to its limit.</description>
+      <description>Once per activation, this unit can spike to use Realignment Codex. When it does so, you can clear any amount of Arc from one friendly unit within 10&quot; of this model or charge one unit with any amount of Arc up to its limit.</description>
     </rule>
     <rule id="f617-cd36-a4f8-cd90" name="Command Interface (Paladin) (Spike)" hidden="false">
       <description>During its activation, this model can spike to remove an activation token from a friendly Paladin squad within 10&quot; of it.</description>
@@ -714,8 +714,8 @@
     <rule id="7e28-2524-d7db-abda" name="Fire &amp; Displace" hidden="false">
       <description>Immediately after resolving a ranged attack made by this model, this model can move up to 3&quot;.</description>
     </rule>
-    <rule id="8d87-7a73-e467-d6cd" name="Repulsor Shield (Spike)" hidden="false">
-      <description>When this model is hit by a melee attack, after the attack is resolved, this model can spike to use Repulsor Ram. The attacking model is immediately slammed 3&quot; directly away from this model. Collateral damage is equal to the POW of the attacking model&apos;s melee weapon.</description>
+    <rule id="8d87-7a73-e467-d6cd" name="Repulsor Ram (Spike)" hidden="false">
+      <description>When this model is hit by a melee attack, after the attack is resolved, this model can spike once to use Repulsor Ram. The attacking model is immediately slammed 3&quot; directly away from this model. Collateral damage is equal to the POW of the attacking model&apos;s melee weapon.</description>
     </rule>
     <rule id="2060-8a7e-1170-aae4" name="Pathfinder" hidden="false">
       <description>This model ignores movement penalties for rough terrain.</description>
@@ -802,10 +802,10 @@
       <description>While charged, the models in this squad gain cover.</description>
     </rule>
     <rule id="c2f8-48d9-d6ed-1bdf" name="Force Ram (Spike)" hidden="false">
-      <description>When this model hits a target with an attack with this weapon, it can spike to cause the target to be slammed rather than suffering the effects of Paralysis. Before damage is rolled, the model hit is slammed 3&quot; directly away from this model. Collateral damage is equal to the POW of this weapon.</description>
+      <description>When this model hits a target with an attack with this weapon, it can spike once to cause the target to be slammed rather than suffering the effects of Lock Down. Before damage is rolled, the model hit is slammed 3&quot; directly away from this model. Collateral damage is equal to the POW of this weapon.</description>
     </rule>
     <rule id="c5f2-b7a9-63fd-e500" name="Lock Down" hidden="false">
-      <description>A model hit by this weapon suffers the lock down continuous effect.</description>
+      <description>A model hit by this weapon suffers the Lock Down continuous effect.</description>
     </rule>
     <rule id="214b-e301-de8e-4e3d" name="Afterburner (Spike)" hidden="false">
       <description>This model can spike at thestart of its activation to use Afterburner. During that activation, this model can advance a number of inches equal to its SPD x3 but cannot make any attacks.</description>
@@ -826,13 +826,13 @@
       <description>When this model makes an attack with this weapon while charged, add two power dice to the attack roll for each Arc on it instead of one.</description>
     </rule>
     <rule id="44eb-53c1-d618-01b8" name="Adrenalizer (Charge)" hidden="false">
-      <description>When this model is charged, other warrior models within 5&quot; of it gain +1 ARM and do not suffer continuous effects.</description>
+      <description>When this model is charged, other warrior models within 5&quot; of it gain +1 ARM and do not suffer continuous effects. Additionally, continuous effects on affected model immediately expire.</description>
     </rule>
     <rule id="4339-3e50-7d6c-5e50" name="Repair (Action)" hidden="false">
       <description>This model can make a repair special action to repair a friendly model within 1&quot; of it. Roll three action dice. For each strike rolled, remove 1 damage point from the model being repaired.</description>
     </rule>
     <rule id="343c-4bc9-0f7d-c741" name="Resurrection Protocol (Spike)" hidden="false">
-      <description>During its activation and while within 10&quot; of a target friendly squad, this model can spike to return up to two destroyed trooper models to the squad. Place these models within 2&quot; of another model in the squad. A squad can never have more than three trooper models as a result of Resurrection Protocol.</description>
+      <description>During its activation and while within 10&quot; of a target friendly squad, this model can spike to return up to two destroyed non-attachment models to the squad. Place these models within 2&quot; of another model in the squad. A squad can never have more than three trooper models as a result of Resurrection Protocol.</description>
     </rule>
     <rule id="3189-813b-6b69-49ec" name="Jump Jets (Spike)" hidden="false">
       <description>Once per activation, this model can spike to gain +3 SPC and Flight until the end of its activation.</description>
@@ -916,7 +916,7 @@
       <description>While this model is charged, increase the Deployment Cost of enemy units deployed from Void Gates within 10&quot; of this model by 1.</description>
     </rule>
     <rule id="a862-92a3-7800-6e64" name="Neural Web" hidden="false">
-      <description>This model gains a cumulative +1 MAT bonus for each other friendly unit with 5&quot;</description>
+      <description>This model gains a cumulative +1 MAT bonus for each other friendly unit with 5&quot;, up to a bonus of +3</description>
     </rule>
     <rule id="834a-f198-e6c0-5923" name="Defense Matrix (Charge)" hidden="false">
       <description>While this model is charged, it gains +3 DEF against ballistic weapons.</description>
@@ -941,6 +941,12 @@
     </rule>
     <rule id="fbcf-7d2a-48f0-4286" name="Eruption" hidden="false">
       <description>When this model chooses to use Eruption it makes its attacks during its activation. If it does so, all other models within 3&quot; of it each suffer a POW 3 explosion damage roll.</description>
+    </rule>
+    <rule id="8e98-cf4d-0227-ff7b" name="Hunter-Killer Salvo (Spike)" hidden="false">
+      <description>During its activation, this squad can spike to ignore line of sight and cover when making ranged attacks for the rest of its activation.</description>
+    </rule>
+    <rule id="9b60-e71e-a84d-0bd7" name="Cleave" hidden="false">
+      <description>If this model destroys an enemy model with an attack with this weapon, it can immediately make an additional attack with this weapon. Attacks generated by Cleave cannot generate furher additional attacks.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
