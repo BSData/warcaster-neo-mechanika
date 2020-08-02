@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ac83-1714-49af-721e" name="Iron Star Alliance" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="6e64-0ab9-a430-a976" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="ac83-1714-49af-721e" name="Iron Star Alliance" revision="4" battleScribeVersion="2.03" library="false" gameSystemId="6e64-0ab9-a430-a976" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="b0e6-c6b9-4e6f-7c99" name="Firebrand" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -490,7 +490,7 @@
       <infoLinks>
         <infoLink id="e99f-5164-46cf-e19a" name="Compound Armor" hidden="false" targetId="17ec-c1b8-c3fb-459f" type="rule"/>
         <infoLink id="9cf8-e0a0-49a6-ffaa" name="Smart Lock (Charge)" hidden="false" targetId="6e59-f079-4476-730f" type="rule"/>
-        <infoLink id="7281-5616-be1c-b0e1" name="Hunter-Killer Rounds (Spike)" hidden="false" targetId="cb00-7571-a4fd-84d6" type="rule"/>
+        <infoLink id="7281-5616-be1c-b0e1" name="Hunter-Killer Salvo (Spike)" hidden="false" targetId="8e98-cf4d-0227-ff7b" type="rule"/>
         <infoLink id="3b94-c824-268b-d930" name="Harbinger Cannon" hidden="false" targetId="34fc-3815-d467-5147" type="profile"/>
         <infoLink id="f537-55a5-aa12-abd3" name="Strafe" hidden="false" targetId="77e6-c811-aef4-ee7f" type="rule"/>
       </infoLinks>

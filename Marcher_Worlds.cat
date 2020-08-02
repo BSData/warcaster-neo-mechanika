@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="154e-fbe3-f081-b409" name="Marcher Worlds" revision="2" battleScribeVersion="2.03" library="false" gameSystemId="6e64-0ab9-a430-a976" gameSystemRevision="1" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="154e-fbe3-f081-b409" name="Marcher Worlds" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="6e64-0ab9-a430-a976" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="c9ff-4d93-b27c-d56b" name="Dusk Wolf" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -484,6 +484,7 @@
     <selectionEntry id="dcba-bdcf-28df-5b87" name="Ripper" hidden="false" collective="false" import="true" type="upgrade">
       <infoLinks>
         <infoLink id="cd90-8f74-1fb1-0d29" name="Ripper" hidden="false" targetId="b5f5-c5af-2b1d-db71" type="profile"/>
+        <infoLink id="20bb-3e59-6766-fc18" name="Cleave" hidden="false" targetId="9b60-e71e-a84d-0bd7" type="rule"/>
       </infoLinks>
       <costs>
         <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
@@ -630,7 +631,7 @@
       <characteristics>
         <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
         <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
+        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">2</characteristic>
         <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
         <characteristic name="Rules" typeId="b9f6-e564-4386-9830"/>
       </characteristics>
@@ -755,8 +756,8 @@
     <profile id="8904-f5d5-d3c3-2fe2" name="Slug Gun" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
       <characteristics>
         <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
+        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
+        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
         <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
         <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Repulsor</characteristic>
       </characteristics>
