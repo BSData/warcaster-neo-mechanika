@@ -1164,6 +1164,8 @@
   <entryLinks>
     <entryLink id="f926-ec16-e9d3-c4fa" name="Doctor Mira Hurst" hidden="false" collective="false" import="true" targetId="afbe-3ad8-68cc-021f" type="selectionEntry"/>
     <entryLink id="6106-46a1-8296-7730" name="Cyphers" hidden="false" collective="false" import="true" targetId="3961-255e-7446-6cc4" type="selectionEntry"/>
+    <entryLink id="9b6f-069c-339b-e67d" name="Corebus" hidden="false" collective="false" import="true" targetId="413f-3332-67a2-8853" type="selectionEntry"/>
+    <entryLink id="dd3c-52c1-c026-2f7a" name="Harlan Sek, The Curator" hidden="false" collective="false" import="true" targetId="2ed8-0d73-fb42-d501" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="b90c-c2c1-f3ab-abca" name="Tentacle Strike" hidden="false" collective="false" import="true" type="upgrade">
