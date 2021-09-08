@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="154e-fbe3-f081-b409" name="Marcher Worlds" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="6e64-0ab9-a430-a976" gameSystemRevision="4" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="154e-fbe3-f081-b409" name="Marcher Worlds" revision="3" battleScribeVersion="2.03" library="false" gameSystemId="6e64-0ab9-a430-a976" gameSystemRevision="3" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry id="c9ff-4d93-b27c-d56b" name="Dusk Wolf" hidden="false" collective="false" import="true" type="model">
       <constraints>
@@ -34,9 +34,11 @@
           </constraints>
           <selectionEntries>
             <selectionEntry id="e48f-6463-ae52-a70b" name="Neural Net Cortex" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="3bcc-c8c5-da55-d10a" name="Neural Net" hidden="false" targetId="18a0-5c55-a14a-519d" type="rule"/>
-              </infoLinks>
+              <rules>
+                <rule id="b2a4-c593-4877-2d15" name="Neural Net" hidden="false">
+                  <description>This model gains a cumulative +1 DEF bonus for each other friendly unit within 5&quot; , up to a bonus of +3.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
               </costs>
@@ -51,9 +53,11 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="fe55-8c8f-6470-84ca" name="Fighter Cortex" hidden="false" collective="false" import="true" type="upgrade">
-              <infoLinks>
-                <infoLink id="3025-c84f-b19d-b0b9" name="Rapid Strike" hidden="false" targetId="5e13-0046-6809-c381" type="rule"/>
-              </infoLinks>
+              <rules>
+                <rule id="ca38-4576-6d30-be6a" name="Rapid Strike" hidden="false">
+                  <description>When this model attacks during its activation, it can make one additional melee atack with each of its melee weapons.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
               </costs>
@@ -78,25 +82,36 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2a1b-040b-243e-5ae2" type="max"/>
               </constraints>
               <entryLinks>
-                <entryLink id="ce28-4860-ec87-f510" name="Battle Rifle" hidden="false" collective="false" import="true" targetId="3b72-5fc5-a159-1429" type="selectionEntry"/>
-                <entryLink id="65e7-4ffd-24f7-59b4" name="Ripper" hidden="false" collective="false" import="true" targetId="dcba-bdcf-28df-5b87" type="selectionEntry"/>
-                <entryLink id="22c8-f9e9-5cde-03c2" name="Flame Thrower" hidden="false" collective="false" import="true" targetId="3eb8-20ba-d492-11b0" type="selectionEntry"/>
-                <entryLink id="147d-5ab2-aee4-1953" name="Impaler" hidden="false" collective="false" import="true" targetId="3807-0a5f-9501-0ed2" type="selectionEntry"/>
-                <entryLink id="3b7c-f31e-7738-a137" name="Particle Accelerator" hidden="false" collective="false" import="true" targetId="6485-7691-7900-71d5" type="selectionEntry"/>
-                <entryLink id="d9e4-1206-e235-4b6c" name="Slug Gun" hidden="false" collective="false" import="true" targetId="e9bf-7176-b61d-4e73" type="selectionEntry"/>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="854f-11f5-dfc4-b4e3" name="Right Arm" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7867-df3f-9aef-465b" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="ff92-cdcf-17a0-cbad" name="Battle Rifle" hidden="false" collective="false" import="true" targetId="3b72-5fc5-a159-1429" type="selectionEntry"/>
-                <entryLink id="5026-323f-1c95-e8b3" name="Ripper" hidden="false" collective="false" import="true" targetId="dcba-bdcf-28df-5b87" type="selectionEntry"/>
-                <entryLink id="a239-56e4-0b9d-fd47" name="Flame Thrower" hidden="false" collective="false" import="true" targetId="3eb8-20ba-d492-11b0" type="selectionEntry"/>
-                <entryLink id="8229-5f0b-d86f-874b" name="Impaler" hidden="false" collective="false" import="true" targetId="3807-0a5f-9501-0ed2" type="selectionEntry"/>
-                <entryLink id="44c9-0768-6ceb-e1b6" name="Particle Accelerator" hidden="false" collective="false" import="true" targetId="6485-7691-7900-71d5" type="selectionEntry"/>
-                <entryLink id="a006-3648-9ab1-7783" name="Slug Gun" hidden="false" collective="false" import="true" targetId="e9bf-7176-b61d-4e73" type="selectionEntry"/>
+                <entryLink id="ce28-4860-ec87-f510" name="Battle Rifle" hidden="false" collective="false" import="true" targetId="3b72-5fc5-a159-1429" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="65e7-4ffd-24f7-59b4" name="Ripper" hidden="false" collective="false" import="true" targetId="dcba-bdcf-28df-5b87" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="22c8-f9e9-5cde-03c2" name="Flame Thrower" hidden="false" collective="false" import="true" targetId="3eb8-20ba-d492-11b0" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="147d-5ab2-aee4-1953" name="Impaler" hidden="false" collective="false" import="true" targetId="3807-0a5f-9501-0ed2" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="3b7c-f31e-7738-a137" name="Particle Accelerator" hidden="false" collective="false" import="true" targetId="6485-7691-7900-71d5" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="d9e4-1206-e235-4b6c" name="Slug Gun" hidden="false" collective="false" import="true" targetId="e9bf-7176-b61d-4e73" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
             <selectionEntryGroup id="2de8-2fc1-4452-4a71" name="Shoulder" hidden="false" collective="false" import="true">
@@ -104,10 +119,63 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2169-6ca5-d542-84b4" type="max"/>
               </constraints>
               <entryLinks>
-                <entryLink id="8823-6652-fe9e-c3a1" name="Talon Rocket Pod" hidden="false" collective="false" import="true" targetId="c24f-faf3-2890-4e6e" type="selectionEntry"/>
-                <entryLink id="f116-b857-30f1-c521" name="Rail Gun" hidden="false" collective="false" import="true" targetId="921a-71ea-73af-991d" type="selectionEntry"/>
-                <entryLink id="5486-4a9f-8747-1b6c" name="Blazer" hidden="false" collective="false" import="true" targetId="92f0-ed13-0a2c-ecae" type="selectionEntry"/>
-                <entryLink id="4332-8710-0848-cfbe" name="Wildflower" hidden="false" collective="false" import="true" targetId="28df-111d-3305-ece5" type="selectionEntry"/>
+                <entryLink id="8823-6652-fe9e-c3a1" name="Talon Rocket Pod" hidden="false" collective="false" import="true" targetId="c24f-faf3-2890-4e6e" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="f116-b857-30f1-c521" name="Rail Gun" hidden="false" collective="false" import="true" targetId="921a-71ea-73af-991d" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="5486-4a9f-8747-1b6c" name="Blazer" hidden="false" collective="false" import="true" targetId="92f0-ed13-0a2c-ecae" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="4332-8710-0848-cfbe" name="Wildflower" hidden="false" collective="false" import="true" targetId="28df-111d-3305-ece5" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="d392-f9ca-2982-3428" name="Right Arm" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f84-43c4-8241-d9e6" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="7cd8-0c04-8186-86eb" name="Battle Rifle" hidden="false" collective="false" import="true" targetId="3b72-5fc5-a159-1429" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="a0f3-13fd-9a2b-89ea" name="Ripper" hidden="false" collective="false" import="true" targetId="dcba-bdcf-28df-5b87" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="ff85-b20a-916b-0e95" name="Flame Thrower" hidden="false" collective="false" import="true" targetId="3eb8-20ba-d492-11b0" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="caf6-44c1-a78e-f2ae" name="Impaler" hidden="false" collective="false" import="true" targetId="3807-0a5f-9501-0ed2" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="9890-4d0a-b28c-1261" name="Particle Accelerator" hidden="false" collective="false" import="true" targetId="6485-7691-7900-71d5" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="0f70-03fb-ae4c-da82" name="Slug Gun" hidden="false" collective="false" import="true" targetId="e9bf-7176-b61d-4e73" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -136,15 +204,30 @@
       </profiles>
       <infoLinks>
         <infoLink id="8a42-ef3f-481b-4dcd" name="Slip Displacer (Spike)" hidden="false" targetId="6fe1-a603-4323-af51" type="rule"/>
-        <infoLink id="ccde-a0da-2252-b483" name="Battle Rifle" hidden="false" targetId="0ee5-8bc2-a046-94ba" type="profile"/>
-        <infoLink id="97d0-fb79-03c0-b4b7" name="Fusion Blade" hidden="false" targetId="a7eb-f0e9-f06e-de5d" type="profile"/>
-        <infoLink id="8788-c3be-06d2-471d" name="Null Detonator" hidden="false" targetId="c08c-1fef-6c35-56f9" type="profile"/>
-        <infoLink id="f7b0-40df-7d70-d367" name="Mechanikal Optics (Charge)" hidden="true" targetId="5c5b-ce9c-65e9-1bb6" type="rule"/>
-        <infoLink id="076d-5e94-3589-2bc6" name="Nullifier" hidden="true" targetId="24ab-84f6-b1d5-3fba" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4b09-b7b3-0c6e-77df" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink id="8045-c65d-5323-64a7" name="Battle Rifle" hidden="false" collective="false" import="true" targetId="3b72-5fc5-a159-1429" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4722-c246-5d2d-1526" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6895-5904-6ea1-70c9" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="6e26-cab8-ccdf-ce68" name="Null Detonator" hidden="false" collective="false" import="true" targetId="b93c-4a3a-7273-5ec8" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="807d-b6d8-1a57-68db" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b924-fa90-b10b-09b2" type="max"/>
+          </constraints>
+        </entryLink>
+        <entryLink id="b10b-5310-ec50-c766" name="Fusion Blade" hidden="false" collective="false" import="true" targetId="ddfc-dacc-8d2e-265f" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e2a9-ddf5-b01c-83d1" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b45-edcf-e51f-69b9" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
@@ -167,23 +250,50 @@
           </characteristics>
         </profile>
       </profiles>
-      <infoGroups>
-        <infoGroup id="00c5-9737-bba6-c349" name="Weapon Rules" hidden="false">
-          <infoLinks>
-            <infoLink id="8a4d-42d0-ac3c-7f99" name="Repulsor" hidden="false" targetId="83ee-82fd-698b-c4e6" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
+      <rules>
+        <rule id="12c1-a47d-e3c5-98ec" name="Fury Reciprocator (Spike)" hidden="false">
+          <description>When you channel a Fury Cypher through this model, after the attack is resolved, this model can spike to return the Cypher card to your hand.</description>
+        </rule>
+      </rules>
       <infoLinks>
         <infoLink id="5ea1-7e83-f09c-30a0" name="Arcantrik Amplifier (Charge)" hidden="false" targetId="a4ab-9b99-4e38-42f9" type="rule"/>
         <infoLink id="418f-4175-b444-acca" name="Arc Relay (10)" hidden="false" targetId="d687-ce36-bcf1-95c6" type="rule"/>
-        <infoLink id="a35f-628f-3ea5-4c8d" name="Fury Reciprocator (Spike)" hidden="false" targetId="403b-2f51-d670-cb59" type="rule"/>
-        <infoLink id="cea1-5e9b-e9a6-9297" name="Handgun" hidden="false" targetId="f54d-f3a0-98f9-4a16" type="profile"/>
-        <infoLink id="2fc3-69c9-86de-bbc7" name="Battle Staff" hidden="false" targetId="bb53-9901-54b9-acb5" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a625-6f06-b778-1be7" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="22b3-253f-de11-b472" name="Battle Staff" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9037-25ad-8fe0-48cf" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="806c-8552-f3c5-ced6" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="59f5-30ba-fbb3-d39f" name="Battle Staff" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="db2d-d70e-bf43-86c9" name="Melee" hidden="false" targetId="6c5c-9284-ad97-ece8" type="rule"/>
+            <infoLink id="0599-5929-287b-f1fe" name="Kinetic" hidden="false" targetId="9e4e-f8cd-00eb-cad9" type="rule"/>
+            <infoLink id="d950-2e59-1826-54db" name="Repulsor" hidden="false" targetId="83ee-82fd-698b-c4e6" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="0360-9704-56bd-db21" name="Handgun" hidden="false" collective="false" import="true" targetId="4466-6c6e-5b1e-2620" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d885-31fd-921e-43fc" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d070-4979-2ca7-741c" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
@@ -207,15 +317,44 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="290f-9746-50c5-2e33" name="Combat Blade" hidden="false" targetId="da9e-e7f3-bd55-b883" type="profile"/>
         <infoLink id="0b09-a1eb-f310-7dd5" name="Fire &amp; Displace" hidden="false" targetId="7e28-2524-d7db-abda" type="rule"/>
         <infoLink id="4c00-57ec-47ad-9c1c" name="Mimetic Cloak (Charge)" hidden="false" targetId="7adb-f157-4c5d-c8a9" type="rule"/>
-        <infoLink id="027e-9a4a-651f-03a8" name="Sniper Rifle" hidden="false" targetId="b4dc-c2f5-7af3-717f" type="profile"/>
-        <infoLink id="50d1-05d7-577d-e824" name="Arc Booster (Spike)" hidden="false" targetId="4b13-2e42-d9c4-4f2f" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="23fe-3154-7bac-f47b" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="2985-589d-685d-6441" name="Sniper Rifle" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d50a-503b-fdad-15e7" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fb3c-c868-9827-e08d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9d25-5ffd-d6d8-713e" name="Sniper Rifle" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">15</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="e07a-5349-a343-f525" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+            <infoLink id="8fe4-9a76-6e39-2926" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+            <infoLink id="dc89-f9cb-73bb-4b31" name="Arc Booster (Spike)" hidden="false" targetId="a339-fbad-c256-4d89" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="212f-496a-0ab0-9853" name="Combat Blade" hidden="false" collective="false" import="true" targetId="bad8-a8e3-7f74-4585" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="db97-8c11-b9a8-ec5a" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fff9-ae13-d117-24a2" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
@@ -239,14 +378,59 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="f0e1-f17b-55e3-86ff" name="Fusion Torch" hidden="false" targetId="ab3d-c807-a789-e8cc" type="profile"/>
-        <infoLink id="e2e5-45e1-a5d5-0f6c" name="Wrench" hidden="false" targetId="cb9e-0215-1cf9-2dc5" type="profile"/>
         <infoLink id="72a2-dcab-75e7-045f" name="Jump Start (Spike)" hidden="false" targetId="058b-f612-39f3-2bd6" type="rule"/>
         <infoLink id="4e18-6d46-2136-d986" name="Repair (Action)" hidden="false" targetId="4339-3e50-7d6c-5e50" type="rule"/>
         <infoLink id="9755-c457-568c-2ac9" name="Spotlight (Charge)" hidden="false" targetId="7f04-3809-34a7-682d" type="rule"/>
         <infoLink id="27b3-c2a9-9a2b-9221" name="Tune Up (Action)" hidden="false" targetId="351f-1213-6042-662b" type="rule"/>
-        <infoLink id="81b3-210e-db5a-086c" name="High Intensity (Charge)" hidden="false" targetId="b3c5-5b94-5cca-52ed" type="rule"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink id="327d-45b0-6705-20c3" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="45a4-3e0b-60eb-ed38" name="Fusion Torch" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bcd-9c17-20ae-a45f" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8d24-a9da-59eb-14b8" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="81dd-8d1b-d357-1975" name="Fusion Torch" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="2bdd-e673-fcb9-79c8" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+            <infoLink id="b3ab-26a4-ff4a-a388" name="Beam" hidden="false" targetId="416c-f81b-c698-5f02" type="rule"/>
+            <infoLink id="7988-f47f-be5c-1b8b" name="High Intensity (Charge)" hidden="false" targetId="b3c5-5b94-5cca-52ed" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="385f-0594-880a-780d" name="Wrench" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66c6-e6bc-ff2b-c92c" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="a319-71a1-83b7-2094" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="7fed-71d0-afaf-f4fa" name="Wrench" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="dd5e-67a1-b167-975e" name="Melee" hidden="false" targetId="6c5c-9284-ad97-ece8" type="rule"/>
+            <infoLink id="727d-a84f-903a-1227" name="Kinetic" hidden="false" targetId="9e4e-f8cd-00eb-cad9" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
       <costs>
         <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
@@ -269,10 +453,14 @@
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink id="583a-c838-e0e6-663c" name="Jump Jets (Spike)" hidden="false" targetId="3189-813b-6b69-49ec" type="rule"/>
-        <infoLink id="767b-d664-f5f7-3475" name="Thrusters (Charge)" hidden="false" targetId="1dbf-ada7-71d2-6c11" type="rule"/>
-      </infoLinks>
+      <rules>
+        <rule id="3558-9a05-9181-2122" name="Jump Jets (Spike)" hidden="false">
+          <description>Once per activation, this model can spike to gain +3 SPC and Flight until the end of its activation.</description>
+        </rule>
+        <rule id="3854-fe4c-2f9f-2e55" name="Thrusters (Charge)" hidden="false">
+          <description>While charged, this model ignores movement penalties for rough terrain. Additionally, for each Arc this model is charged with, it gains +1 DEF.</description>
+        </rule>
+      </rules>
       <categoryLinks>
         <categoryLink id="a300-0578-44c2-242d" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
       </categoryLinks>
@@ -292,9 +480,29 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="df2a-b5e9-1f91-73df" name="Bomber Cortex" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="8100-5f04-33c9-495f" name="Bomber" hidden="false">
+                  <description>This model gains +1 action die on attack rolls with explosion weapons. Additionally, when this model makes an attack with an explosion weapon while it has Flight, immediately after the attack is resolved, this model can move up to 2&quot;.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2c34-bb1d-f0f4-fcab" name="Dog Fighter" hidden="false" collective="false" import="true" type="upgrade">
               <infoLinks>
-                <infoLink id="6a9c-937e-831c-3a46" name="Bomber" hidden="false" targetId="8d84-efa6-1ae3-a78b" type="rule"/>
+                <infoLink id="826a-bffb-93af-deef" name="Slip Field (Charge)" hidden="false" targetId="77c5-00b4-a116-e328" type="rule"/>
               </infoLinks>
+              <costs>
+                <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="b4fc-acf3-e86d-35ee" name="Precision" hidden="false" collective="false" import="true" type="upgrade">
+              <rules>
+                <rule id="47df-4783-cc22-7471" name="Structural Analyzer" hidden="false">
+                  <description>This unit&apos;s melee weapons gain +1 POW.</description>
+                </rule>
+              </rules>
               <costs>
                 <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
               </costs>
@@ -326,24 +534,17 @@
                     <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
                   </costs>
                 </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="6f5f-d09f-3fc7-f0a8" name="Right Arm" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bbf9-84e9-a152-00c4" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="b764-73bc-89b2-2a94" name="Battle Rifle" hidden="false" collective="false" import="true" targetId="3b72-5fc5-a159-1429" type="selectionEntry">
-                  <costs>
-                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
-                  </costs>
-                </entryLink>
-                <entryLink id="6cb5-f44b-a4e7-7df7" name="Flame Thrower" hidden="false" collective="false" import="true" targetId="3eb8-20ba-d492-11b0" type="selectionEntry">
+                <entryLink id="713d-7b69-fdb4-5712" name="Particle Accelerator" hidden="false" collective="false" import="true" targetId="6485-7691-7900-71d5" type="selectionEntry">
                   <costs>
                     <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
                   </costs>
                 </entryLink>
-                <entryLink id="303a-21ff-cdc4-dc56" name="Fusion Drill" hidden="false" collective="false" import="true" targetId="3cc2-32aa-c726-779a" type="selectionEntry">
+                <entryLink id="11b8-b6c5-6fbb-0604" name="Slug Gun" hidden="false" collective="false" import="true" targetId="e9bf-7176-b61d-4e73" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="bbd3-2fcc-2910-c8c0" name="Rock Buster" hidden="false" collective="false" import="true" targetId="a69e-85de-6f7e-c93a" type="selectionEntry">
                   <costs>
                     <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
                   </costs>
@@ -370,26 +571,101 @@
                     <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
                   </costs>
                 </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="e439-c270-24cc-55d0" name="Right Shoulder" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5da8-4bca-fb72-a914" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink id="94d0-5e38-e15f-5ad0" name="Talon Rocket Pod" hidden="false" collective="false" import="true" targetId="c24f-faf3-2890-4e6e" type="selectionEntry">
+                <entryLink id="e212-32c6-5583-bcfd" name="Blazer" hidden="false" collective="false" import="true" targetId="92f0-ed13-0a2c-ecae" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="6712-e3b7-54ac-b26a" name="Cyclone Cannon" hidden="false" collective="false" import="true" targetId="1370-1442-954f-4994" type="selectionEntry">
+                  <infoLinks>
+                    <infoLink id="ae48-7f79-c925-c470" name="Defense Matrix (Charge)" hidden="false" targetId="834a-f198-e6c0-5923" type="rule"/>
+                    <infoLink id="0407-d338-1944-e7c1" name="Anti-Air" hidden="false" targetId="8758-53ba-60e8-19ab" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="1a0c-97b1-d1da-ea2f" name="Vortex Missile" hidden="false" collective="false" import="true" targetId="177d-e828-357a-dec8" type="selectionEntry">
                   <costs>
                     <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
                   </costs>
                 </entryLink>
-                <entryLink id="4ae7-475a-e3fb-9de4" name="Rail Gun" hidden="false" collective="false" import="true" targetId="921a-71ea-73af-991d" type="selectionEntry">
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="2b0e-0b63-0a58-83c2" name="Right Arm" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1374-4fde-2e0d-4399" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="96f7-2d6e-4b61-8d9b" name="Battle Rifle" hidden="false" collective="false" import="true" targetId="3b72-5fc5-a159-1429" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="9dab-62c2-effd-aac6" name="Flame Thrower" hidden="false" collective="false" import="true" targetId="3eb8-20ba-d492-11b0" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="1487-5f9a-0af2-2d72" name="Fusion Drill" hidden="false" collective="false" import="true" targetId="3cc2-32aa-c726-779a" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="56e3-6632-6ae0-d6e1" name="Particle Accelerator" hidden="false" collective="false" import="true" targetId="6485-7691-7900-71d5" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="59e9-71da-a464-84dc" name="Slug Gun" hidden="false" collective="false" import="true" targetId="e9bf-7176-b61d-4e73" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="cbf3-e086-cb1c-5b9a" name="Rock Buster" hidden="false" collective="false" import="true" targetId="a69e-85de-6f7e-c93a" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup id="5411-0e3b-00cc-d3de" name="Right Shoulder" hidden="false" collective="false" import="true">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f1c1-3d74-db10-81e9" type="max"/>
+              </constraints>
+              <entryLinks>
+                <entryLink id="0aa4-2ba5-18c6-b74f" name="Talon Rocket Pod" hidden="false" collective="false" import="true" targetId="c24f-faf3-2890-4e6e" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="f5d3-c915-37d8-bff2" name="Rail Gun" hidden="false" collective="false" import="true" targetId="921a-71ea-73af-991d" type="selectionEntry">
                   <costs>
                     <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
                   </costs>
                 </entryLink>
-                <entryLink id="e2da-22f0-e70d-6a5b" name="Particle Cannon" hidden="false" collective="false" import="true" targetId="4815-be73-0ecc-2255" type="selectionEntry">
+                <entryLink id="8c28-eab5-58f4-e72c" name="Particle Cannon" hidden="false" collective="false" import="true" targetId="4815-be73-0ecc-2255" type="selectionEntry">
                   <costs>
                     <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="4f12-a0d9-3a8c-1755" name="Blazer" hidden="false" collective="false" import="true" targetId="92f0-ed13-0a2c-ecae" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="ed30-3c77-d09f-4478" name="Cyclone Cannon" hidden="false" collective="false" import="true" targetId="1370-1442-954f-4994" type="selectionEntry">
+                  <infoLinks>
+                    <infoLink id="36a3-8101-38ba-5b7e" name="Defense Matrix (Charge)" hidden="false" targetId="834a-f198-e6c0-5923" type="rule"/>
+                    <infoLink id="48df-6907-e43e-bec1" name="Anti-Air" hidden="false" targetId="8758-53ba-60e8-19ab" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+                  </costs>
+                </entryLink>
+                <entryLink id="4fe0-96f2-c5f6-a3cd" name="Vortex Missile" hidden="false" collective="false" import="true" targetId="177d-e828-357a-dec8" type="selectionEntry">
+                  <costs>
+                    <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -420,14 +696,38 @@
       </profiles>
       <infoLinks>
         <infoLink id="589e-1c97-ce19-9e2b" name="Slip Displacer (Spike)" hidden="false" targetId="6fe1-a603-4323-af51" type="rule"/>
-        <infoLink id="21b9-b42f-bb36-5e60" name="Talon Rocket Launcher" hidden="false" targetId="c2ec-3d61-5328-0177" type="profile"/>
-        <infoLink id="b5e7-9d50-92cb-ac2f" name="Fusion Blade" hidden="false" targetId="a7eb-f0e9-f06e-de5d" type="profile"/>
-        <infoLink id="0f1c-8161-1d44-40f9" name="Blast Weapon" hidden="true" targetId="4478-b4bd-42be-09e2" type="rule"/>
-        <infoLink id="1517-0403-5b53-cff5" name="Targeter (Charge)" hidden="true" targetId="1891-8584-c483-7085" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="dfd4-e405-e1d1-38d7" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="7623-6841-38fc-3cf1" name="Talon Rocket Launcher" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ca6f-1517-19c4-0c7e" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b61b-1b08-1874-a275" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="be83-e3b9-ab31-49be" name="Talon Rocket Launcher" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="9e02-8b77-4b20-074f" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+            <infoLink id="8a60-9b8a-1d97-26e2" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+            <infoLink id="b560-802e-8754-8897" name="Blast" hidden="false" targetId="4478-b4bd-42be-09e2" type="rule"/>
+            <infoLink id="791b-0095-5095-1812" name="Targeter (Charge)" hidden="false" targetId="1891-8584-c483-7085" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="0c54-b86e-00cb-2841" name="Fusion Blade" hidden="false" collective="false" import="true" targetId="ddfc-dacc-8d2e-265f" type="selectionEntry"/>
+      </entryLinks>
       <costs>
         <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
@@ -451,16 +751,359 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="7fb3-ce7f-6a52-f494" name="Arclock Pistol" hidden="false" targetId="1ad5-cbfa-6279-0f86" type="profile"/>
-        <infoLink id="91da-b9e5-46ba-490f" name="Arclock Pistol" hidden="false" targetId="1ad5-cbfa-6279-0f86" type="profile"/>
-        <infoLink id="1830-f539-c121-fde7" name="Maelstrom Activator (Spike)" hidden="false" targetId="4c2b-8ff6-dbbb-8525" type="rule"/>
+        <infoLink id="1830-f539-c121-fde7" name="Maelstrom Activator (Spike)" hidden="false" targetId="51e5-2ce6-9605-ac40" type="rule"/>
         <infoLink id="1520-b324-783f-6ae1" name="Smart Lock (Charge)" hidden="false" targetId="6e59-f079-4476-730f" type="rule"/>
         <infoLink id="1e88-5db1-781a-2235" name="Weapon Expert" hidden="false" targetId="ed37-1d75-e270-e479" type="rule"/>
-        <infoLink id="71d9-dbce-1c6f-7602" name="Attack Mode (Arclock Pistol)" hidden="false" targetId="468a-cdd0-c1f0-4d47" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="80d5-947e-7bb6-28da" name="New CategoryLink" hidden="false" targetId="cc26-f6fc-643b-1352" primary="true"/>
       </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="721a-3a84-1c05-9d64" name="Arclock Pistol" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="da17-c3c6-fd09-e81e" type="min"/>
+            <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1b14-17aa-814e-dfbf" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0a19-d0e7-b12f-a941" name="Arclock Pistol" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">10</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup id="9728-f896-6ad5-73a3" name="Attack Mode" hidden="false">
+              <infoLinks>
+                <infoLink id="be94-90a8-91aa-3b4a" name="Blast" hidden="false" targetId="4478-b4bd-42be-09e2" type="rule"/>
+                <infoLink id="81c4-b3fb-c341-d938" name="Fire" hidden="false" targetId="c2c4-1eac-f24e-09f5" type="rule"/>
+                <infoLink id="91f2-bba3-0345-dbdd" name="Revelator" hidden="false" targetId="c8f4-25c2-f013-c8b2" type="rule"/>
+              </infoLinks>
+            </infoGroup>
+          </infoGroups>
+          <infoLinks>
+            <infoLink id="b959-df4a-fa86-cfe8" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+            <infoLink id="e1ef-bcda-93a7-c980" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="7dae-96da-d042-36b1" name="Ranger Infiltrators" hidden="false" collective="false" import="true" type="unit">
+      <profiles>
+        <profile id="5807-b968-dcb2-fcd6" name="Ranger Infiltrators" hidden="false" typeId="ee5b-45d6-6439-5c83" typeName="Squad">
+          <characteristics>
+            <characteristic name="SPD" typeId="63e0-b44a-50f3-5d3f">6</characteristic>
+            <characteristic name="MAT" typeId="0a8b-a206-4acf-92ae">4</characteristic>
+            <characteristic name="RAT" typeId="d86f-3c79-7c50-0502">3</characteristic>
+            <characteristic name="DEF" typeId="d2bf-4ab1-bbd1-c53d">3</characteristic>
+            <characteristic name="ARM" typeId="df58-c0c5-6903-dd53">3</characteristic>
+            <characteristic name="NUM" typeId="cc5f-a02a-8153-9031">3</characteristic>
+            <characteristic name="CST" typeId="403d-0963-ce1f-565d">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="407f-f29d-909b-9e53" name="Dynamic Accelerator (Charge)" hidden="false" targetId="592d-4c1c-98fb-122f" type="rule"/>
+        <infoLink id="dd94-7d0a-71aa-004a" name="Slip Displacer (Spike)" hidden="false" targetId="6fe1-a603-4323-af51" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="cc34-01c2-9d8a-a019" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry id="49d5-900a-0f88-c911" name="Fusion Axe" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="a730-6931-af3f-de4a" name="Fusion Axe" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">5</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="5114-0a1a-11ea-a8e9" name="Melee" hidden="false" targetId="6c5c-9284-ad97-ece8" type="rule"/>
+            <infoLink id="28dc-44d2-4120-12e4" name="Kinetic" hidden="false" targetId="9e4e-f8cd-00eb-cad9" type="rule"/>
+            <infoLink id="f656-61db-ef51-1fdb" name="Cleave" hidden="false" targetId="1a75-dcac-9578-c7f9" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="99f6-f02b-49ac-e175" name="Magnetic Charge" hidden="false" collective="false" import="true" type="upgrade">
+          <profiles>
+            <profile id="b105-6158-494c-6557" name="Magnetic Charge" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+              <characteristics>
+                <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">2</characteristic>
+                <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule id="35f1-84f1-587b-d6a7" name="Delayed Blast" hidden="false">
+              <description>When this model hits with an attack with this weapon, before damage is rolled, this model can immediately move up to 3£. Additionally, when resolving an attack with this weapon, ignore this model when determining the two closest models to the target.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="ba0f-8a26-8841-9f1e" name="Melee" hidden="false" targetId="6c5c-9284-ad97-ece8" type="rule"/>
+            <infoLink id="4b49-a622-7c21-85ae" name="Blast" hidden="false" targetId="4478-b4bd-42be-09e2" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="ac68-7485-5e6f-56cf" name="Warder" hidden="false" collective="false" import="true" type="model">
+      <modifiers>
+        <modifier type="increment" field="5474-2b1d-9949-72f8" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="7dae-96da-d042-36b1" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="64e2-a6b6-1c07-bb9b" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3714-c286-79ac-2dcb" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5474-2b1d-9949-72f8" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d6d3-3134-7217-bd04" name="Warder" hidden="false" typeId="ee5b-45d6-6439-5c83" typeName="Squad">
+          <characteristics>
+            <characteristic name="SPD" typeId="63e0-b44a-50f3-5d3f">*</characteristic>
+            <characteristic name="MAT" typeId="0a8b-a206-4acf-92ae">3</characteristic>
+            <characteristic name="RAT" typeId="d86f-3c79-7c50-0502">3</characteristic>
+            <characteristic name="DEF" typeId="d2bf-4ab1-bbd1-c53d">3</characteristic>
+            <characteristic name="ARM" typeId="df58-c0c5-6903-dd53">3</characteristic>
+            <characteristic name="NUM" typeId="cc5f-a02a-8153-9031">1</characteristic>
+            <characteristic name="CST" typeId="403d-0963-ce1f-565d">+1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="6a67-71d4-e6e1-4564" name="Aporopaic Reactor (Spike)" hidden="false">
+          <description>When an enemy attack or special rule would cause a Cypher on this squad to expire, this model can spike to keep the Cypher from expiring.</description>
+        </rule>
+        <rule id="dc47-aa89-9345-0a0a" name="Arc Distuptor (Charge)" hidden="false">
+          <description>While this model is charged, models in the unit add two POWER dice to defense rolls against Fury attacks.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink id="dc45-df57-ee84-b0ee" name="Arc Exchange" hidden="false" targetId="089a-a7eb-cae0-9775" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="f57d-9b13-a761-123a" name="New CategoryLink" hidden="false" targetId="fa79-7113-8f14-037f" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink id="eb4a-ca3f-4f53-dd12" name="Handgun" hidden="false" collective="false" import="true" targetId="4466-6c6e-5b1e-2620" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="059e-70e7-c658-2baf" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="04ef-9435-04ac-c8d9" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e1cd-771d-ad6a-f44b" name="Blast Shield" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ce93-7578-ccd5-b328" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9840-2a29-a9b8-3877" name="Blast Shield" hidden="false" typeId="f21f-e3fc-861e-7041" typeName="Mantlet">
+          <characteristics>
+            <characteristic name="SPD" typeId="9a1a-1996-43a0-5ebf">-</characteristic>
+            <characteristic name="MAT" typeId="ef7d-7e69-bb45-465a">-</characteristic>
+            <characteristic name="RAT" typeId="0dee-6f34-8704-e237">-</characteristic>
+            <characteristic name="DEF" typeId="7629-6783-48fa-04fb">1</characteristic>
+            <characteristic name="ARM" typeId="8838-aacd-9ec7-99b1">4</characteristic>
+            <characteristic name="DMG" typeId="c150-c260-a91e-5bdb">2</characteristic>
+            <characteristic name="CST" typeId="e127-231f-27ff-e6a4">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="b7e2-4a68-b13e-a7e6" name="Deployable Cover" hidden="false" targetId="7d92-ecde-abcd-cac0" type="rule"/>
+        <infoLink id="9359-3477-2120-2e3f" name="Compound Armor" hidden="false" targetId="17ec-c1b8-c3fb-459f" type="rule"/>
+        <infoLink id="ddb1-cd58-c116-3b13" name="Blast Shielding" hidden="false" targetId="4a41-827f-6868-3087" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="003f-77f1-0bb9-2172" name="New CategoryLink" hidden="false" targetId="2046-8d8f-ce5e-6153" primary="true"/>
+        <categoryLink id="5418-51d2-091c-368e" name="New CategoryLink" hidden="false" targetId="2046-8d8f-ce5e-6153" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="3132-1bd1-e790-5e29" name="Razorbat" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="6174-d9bd-e769-0a12" name="Razorbat" hidden="false" typeId="8503-75a8-8ab2-161b" typeName="Vehicle">
+          <characteristics>
+            <characteristic name="SPD" typeId="d513-8b95-8e8b-9643">8</characteristic>
+            <characteristic name="MAT" typeId="dd71-a3b1-b5d2-4126">3</characteristic>
+            <characteristic name="RAT" typeId="4972-6b8a-4cc9-a39d">4</characteristic>
+            <characteristic name="DEF" typeId="5d4e-e604-9d25-f35d">3</characteristic>
+            <characteristic name="ARM" typeId="5dd6-51ae-08e3-2c18">5</characteristic>
+            <characteristic name="DMG" typeId="804d-3ef2-0e46-d938">4</characteristic>
+            <characteristic name="CST" typeId="c28f-24c8-5446-8b51">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="0944-8b52-c33e-a951" name="Maneuvers" hidden="false">
+          <infoLinks>
+            <infoLink id="22fe-57b8-eed1-35a3" name="Guns Ready" hidden="false" targetId="235c-e23b-4228-be38" type="rule"/>
+            <infoLink id="0213-d8d6-946f-6f35" name="Hit the Jump" hidden="false" targetId="dcdf-5590-dfa6-a721" type="rule"/>
+            <infoLink id="d534-89fe-a480-64fd" name="Stand and Deliver" hidden="false" targetId="6049-7ae2-4745-66d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="9b30-51fa-90a0-caa6" name="Pathfinder" hidden="false" targetId="2060-8a7e-1170-aae4" type="rule"/>
+        <infoLink id="2cac-b629-050e-2338" name="Defense Matrix (Charge)" hidden="false" targetId="834a-f198-e6c0-5923" type="rule"/>
+        <infoLink id="60cd-fbcd-163d-0fcb" name="Maelstrom Activator (Spike)" hidden="false" targetId="51e5-2ce6-9605-ac40" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="5b43-5bf2-5410-5616" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="e882-0e8e-1656-3304" name="Hardpoint" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="ecbb-d452-36d4-0214" scope="3132-1bd1-e790-5e29" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="78e4-b3c6-f3a7-2d69" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e312-100c-fb4a-c7f7" type="max"/>
+          </constraints>
+          <entryLinks>
+            <entryLink id="fca9-7078-058b-5de4" name="Blazer" hidden="false" collective="false" import="true" targetId="92f0-ed13-0a2c-ecae" type="selectionEntry">
+              <infoLinks>
+                <infoLink id="3b49-4537-4bec-9701" name="Turret" hidden="false" targetId="fdfc-0a81-546d-2c31" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="1ac1-3662-42c7-1c9d" name="Slug Cannon" hidden="false" collective="false" import="true" targetId="22e6-7312-979d-4404" type="selectionEntry">
+              <costs>
+                <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="2b62-b39a-14cb-1934" name="Cyclone Cannon" hidden="false" collective="false" import="true" targetId="1370-1442-954f-4994" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2f14-73d6-fa51-35e8" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="28c7-fd23-e024-030c" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b722-8dc0-b3f3-4971" name="Fiddler &amp; Co" hidden="false" collective="false" import="true" type="model">
+      <profiles>
+        <profile id="00d9-1bb1-1212-53f4" name="Fiddler &amp; Co" hidden="false" typeId="5643-55ad-cf84-ac2a" typeName="Solo">
+          <characteristics>
+            <characteristic name="SPD" typeId="e7f7-8a52-6885-3006">8</characteristic>
+            <characteristic name="MAT" typeId="b4d4-69fe-dd8c-7c12">3</characteristic>
+            <characteristic name="RAT" typeId="3127-5d41-efdc-a87d">5</characteristic>
+            <characteristic name="DEF" typeId="8355-c44c-010d-9a88">3</characteristic>
+            <characteristic name="ARM" typeId="d0c1-80eb-f256-6b2f">5</characteristic>
+            <characteristic name="FOC" typeId="b34d-3c07-68b0-ec80">-</characteristic>
+            <characteristic name="DMG" typeId="76be-0810-d006-512c">4</characteristic>
+            <characteristic name="CST" typeId="50cb-a3c5-93ef-21c0">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="59b2-1750-de59-9a9b" name="Maneuvers" hidden="false">
+          <rules>
+            <rule id="7c21-2b91-b1a6-71a3" name="Playing Possum" hidden="false">
+              <description>The model gains Stealth while within rough or obscuring terrain. The maneuver expires at the beginning of this model&apos;s next activation.</description>
+            </rule>
+            <rule id="6f7b-628e-e994-8802" name="Shoot &amp; Scoot" hidden="false">
+              <description>Immediately after resolving a ranged attack made by this model, this model canmove up to 1&quot;. The maneuver expires at the end of this activation.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink id="8f1b-f0cf-2212-76e5" name="Guns Ready" hidden="false" targetId="235c-e23b-4228-be38" type="rule"/>
+            <infoLink id="2a6f-5d04-e736-5415" name="Hit the Jump" hidden="false" targetId="dcdf-5590-dfa6-a721" type="rule"/>
+            <infoLink id="a5f5-4754-c2dc-b214" name="Stand and Deliver" hidden="false" targetId="6049-7ae2-4745-66d9" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="a8e8-438f-9afb-73c7" name="Pathfinder" hidden="false" targetId="2060-8a7e-1170-aae4" type="rule"/>
+        <infoLink id="5683-0eb6-297a-d612" name="Defense Matrix (Charge)" hidden="false" targetId="834a-f198-e6c0-5923" type="rule"/>
+        <infoLink id="d282-7c51-cbb6-6468" name="Maelstrom Activator (Spike)" hidden="false" targetId="51e5-2ce6-9605-ac40" type="rule"/>
+        <infoLink id="8fd6-6478-5c27-5dee" name="Smart Lock (Charge)" hidden="false" targetId="6e59-f079-4476-730f" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink id="a135-ff57-19ca-5ba5" name="New CategoryLink" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="c615-c8dc-5184-147c" name="Hardpoint" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint field="ecbb-d452-36d4-0214" scope="b722-8dc0-b3f3-4971" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4a31-673e-c11a-81dd" type="max"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b7e1-8589-5af3-5e6f" type="max"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry id="41d7-5fe7-3459-fccf" name="Particle Blaster" hidden="false" collective="false" import="true" type="upgrade">
+              <profiles>
+                <profile id="83bb-7b57-df38-0409" name="Particle Blaster" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">14</characteristic>
+                    <characteristic name="POW" typeId="9750-e740-35f4-1cf6">5</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink id="8427-fe77-9b71-1006" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+                <infoLink id="a91e-4b8c-a9ae-4a0f" name="Beam" hidden="false" targetId="416c-f81b-c698-5f02" type="rule"/>
+                <infoLink id="3688-9a23-2c1c-4f09" name="High Intensity (Charge)" hidden="false" targetId="b3c5-5b94-5cca-52ed" type="rule"/>
+                <infoLink id="68dc-a631-c44c-ecba" name="Singularity Collapse" hidden="false" targetId="4bcb-c9b9-251a-f2a5" type="rule"/>
+                <infoLink id="a1c0-a9f5-8b8f-3778" name="Turret" hidden="false" targetId="fdfc-0a81-546d-2c31" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink id="b368-374d-68e8-f384" name="Blazer" hidden="false" collective="false" import="true" targetId="92f0-ed13-0a2c-ecae" type="selectionEntry">
+              <infoLinks>
+                <infoLink id="048c-68d6-c84b-2d9e" name="Turret" hidden="false" targetId="fdfc-0a81-546d-2c31" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="841b-116d-2aef-0367" name="Slug Cannon" hidden="false" collective="false" import="true" targetId="22e6-7312-979d-4404" type="selectionEntry">
+              <costs>
+                <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+              </costs>
+            </entryLink>
+            <entryLink id="d573-409e-a69c-015e" name="Talon Mk II" hidden="false" collective="false" import="true" targetId="e185-7f38-64a3-5dfe" type="selectionEntry"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink id="9619-949b-eb10-ad6b" name="Cyclone Cannon" hidden="false" collective="false" import="true" targetId="1370-1442-954f-4994" type="selectionEntry">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4dee-fb44-11d3-4437" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7a0a-ed6a-292f-98c6" type="max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
       <costs>
         <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
@@ -470,306 +1113,372 @@
     <entryLink id="9584-9d8c-4fe1-fded" name="Cyphers" hidden="false" collective="false" import="true" targetId="3961-255e-7446-6cc4" type="selectionEntry"/>
     <entryLink id="89cd-eb23-64dd-9494" name="Voitek Sudal, Bounty Hunter" hidden="false" collective="false" import="true" targetId="d57b-15ce-482f-c16c" type="selectionEntry"/>
     <entryLink id="0588-8127-196b-ea45" name="Captain Jax Redblade" hidden="false" collective="false" import="true" targetId="2409-20b7-fd32-ff5d" type="selectionEntry"/>
+    <entryLink id="0236-3eef-b411-1851" name="Corebus" hidden="false" collective="false" import="true" targetId="413f-3332-67a2-8853" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntries>
     <selectionEntry id="3b72-5fc5-a159-1429" name="Battle Rifle" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="7a52-be23-8755-ef48" name="Battle Rifle" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="d079-0341-9b8b-acc3" name="Battle Rifle" hidden="false" targetId="0ee5-8bc2-a046-94ba" type="profile"/>
-        <infoLink id="d6fb-0ff9-3a90-ad26" name="Mechanikal Optics (Charge)" hidden="false" targetId="5c5b-ce9c-65e9-1bb6" type="rule"/>
+        <infoLink id="5e05-47eb-211f-a699" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="46aa-5912-5f69-66e1" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+        <infoLink id="e34f-b029-926d-aae5" name="Mechanikal Optics (Charge)" hidden="false" targetId="7995-7ab0-c3da-f21e" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="dcba-bdcf-28df-5b87" name="Ripper" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="6d33-a177-508e-eb91" name="Ripper" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">2</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="cd90-8f74-1fb1-0d29" name="Ripper" hidden="false" targetId="b5f5-c5af-2b1d-db71" type="profile"/>
-        <infoLink id="20bb-3e59-6766-fc18" name="Cleave" hidden="false" targetId="9b60-e71e-a84d-0bd7" type="rule"/>
+        <infoLink id="3ae1-d5fb-2a9e-0872" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="93a6-937e-2bbf-e417" name="Kinetic" hidden="false" targetId="9e4e-f8cd-00eb-cad9" type="rule"/>
+        <infoLink id="823a-82b5-acb2-e583" name="Cleave" hidden="false" targetId="1a75-dcac-9578-c7f9" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3eb8-20ba-d492-11b0" name="Flame Thrower" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="3a69-5b4e-3508-99b8" name="Flame Thrower" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">10</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="5fd4-b3c7-df1f-ff1b" name="Flame Thrower" hidden="false" targetId="d62d-05b1-b29b-d144" type="profile"/>
         <infoLink id="e9eb-386d-868b-cda5" name="Fire" hidden="false" targetId="c2c4-1eac-f24e-09f5" type="rule"/>
         <infoLink id="f7a0-b712-ab42-9b55" name="Spray Weapon" hidden="false" targetId="c56a-eb04-a80f-be7d" type="rule"/>
+        <infoLink id="b28b-8132-2eee-708b" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c24f-faf3-2890-4e6e" name="Talon Rocket Pod" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="83db-55d9-330f-8246" name="Talon Rocket Pod" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="82a7-77ed-342b-80a1" name="Energy Type" hidden="false">
+          <infoLinks>
+            <infoLink id="b6ea-8dd5-856b-10b8" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+            <infoLink id="cdfc-94e2-9f03-76c9" name="Explosion" hidden="false" targetId="f7b6-783e-1ae9-465d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
       <infoLinks>
-        <infoLink id="2655-f02c-4d9a-1690" name="Talon Rocket Pod" hidden="false" targetId="a099-d402-794a-98f5" type="profile"/>
-        <infoLink id="908e-7823-dc2e-b2e1" name="Blast Weapon" hidden="false" targetId="4478-b4bd-42be-09e2" type="rule"/>
+        <infoLink id="908e-7823-dc2e-b2e1" name="Blast" hidden="false" targetId="4478-b4bd-42be-09e2" type="rule"/>
+        <infoLink id="e191-ca2f-545c-966d" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="921a-71ea-73af-991d" name="Rail Gun" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="8f5b-7877-c211-dd6c" name="Rail Gun" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">18</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">5</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="397e-8330-a491-c30f" name="Rail Gun" hidden="false" targetId="9c57-7e77-2600-e924" type="profile"/>
-        <infoLink id="4004-a809-b015-3c59" name="Arc Booster (Spike)" hidden="false" targetId="4b13-2e42-d9c4-4f2f" type="rule"/>
+        <infoLink id="4004-a809-b015-3c59" name="Arc Booster (Spike)" hidden="false" targetId="a339-fbad-c256-4d89" type="rule"/>
+        <infoLink id="3335-4759-10c2-e2b2" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="6701-fe3e-1551-3e5d" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4815-be73-0ecc-2255" name="Particle Cannon" hidden="false" collective="false" import="true" type="upgrade">
-      <infoLinks>
-        <infoLink id="637e-6655-edb7-8221" name="Particle Cannon" hidden="false" targetId="31a2-bac3-73c8-e7fe" type="profile"/>
-        <infoLink id="85c0-a9e7-efa8-69f9" name="Explosive Collapse" hidden="false" targetId="af3d-83e5-57d5-14c6" type="rule"/>
-      </infoLinks>
+      <profiles>
+        <profile id="6471-db13-29b7-f98b" name="Particle Cannon" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">6</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="db9a-d7f1-d4a1-4c6d" name="Explosive Collapse" hidden="false">
+          <description>If this weapon targets and destroys an enemy model, other models within 2&quot; of the model targeted suffer a POW 4 damage roll.</description>
+        </rule>
+      </rules>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3cc2-32aa-c726-779a" name="Fusion Drill" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="f620-0b56-9bf7-932e" name="Fusion Drill" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">2</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">5</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="7519-1333-8f42-ed70" name="Fusion Drill" hidden="false" targetId="85c7-d579-c25d-9aed" type="profile"/>
+        <infoLink id="caf4-40d4-6319-d518" name="Melee" hidden="false" targetId="6c5c-9284-ad97-ece8" type="rule"/>
+        <infoLink id="d1bc-3732-9ead-cc64" name="Kinetic" hidden="false" targetId="9e4e-f8cd-00eb-cad9" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="3807-0a5f-9501-0ed2" name="Impaler" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="aefc-bacc-4441-7450" name="Impaler" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">2</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="cff9-4e2d-f62b-235d" name="Impaler" hidden="false" targetId="452f-bab9-547c-6535" type="profile"/>
-        <infoLink id="2007-040a-28d0-82fd" name="Armor-Piercing" hidden="false" targetId="4a62-dd5f-b896-d12c" type="rule"/>
+        <infoLink id="2007-040a-28d0-82fd" name="Armor Piercing" hidden="false" targetId="4a62-dd5f-b896-d12c" type="rule"/>
+        <infoLink id="d46b-a2e7-1f49-77cd" name="Melee" hidden="false" targetId="6c5c-9284-ad97-ece8" type="rule"/>
+        <infoLink id="abca-226a-347c-abd9" name="Kinetic" hidden="false" targetId="9e4e-f8cd-00eb-cad9" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="6485-7691-7900-71d5" name="Particle Accelerator" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="eeb3-9beb-7c74-12e2" name="Particle Accelerator" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="2b88-49ee-7ae5-d2cb" name="Particle Accelerator" hidden="false" targetId="477f-11ea-1ce7-0b2f" type="profile"/>
         <infoLink id="2f21-9e49-84e2-cf0e" name="High Intensity (Charge)" hidden="false" targetId="b3c5-5b94-5cca-52ed" type="rule"/>
+        <infoLink id="af5f-016c-2317-145c" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="bdf9-00fb-8bda-ac4a" name="Beam" hidden="false" targetId="416c-f81b-c698-5f02" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="e9bf-7176-b61d-4e73" name="Slug Gun" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="197c-3a65-69c8-5898" name="Slug Gun" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="be82-e669-baca-f529" name="Slug Gun" hidden="false" targetId="8904-f5d5-d3c3-2fe2" type="profile"/>
         <infoLink id="9a6e-de8e-b8e8-0e0a" name="Repulsor" hidden="false" targetId="83ee-82fd-698b-c4e6" type="rule"/>
+        <infoLink id="e19d-4244-14eb-ac12" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="2da2-8c27-1415-130f" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="1.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="92f0-ed13-0a2c-ecae" name="Blazer" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="776d-1f71-83f7-5b1b" name="Blazer" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">14</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="cc48-9a79-5ffe-a630" name="Blazer" hidden="false" targetId="62dc-52d7-5d0d-7b1b" type="profile"/>
         <infoLink id="8f11-40b9-7c16-0ad6" name="Fire" hidden="false" targetId="c2c4-1eac-f24e-09f5" type="rule"/>
         <infoLink id="52c4-6692-bbb3-bfc9" name="Strafe" hidden="false" targetId="77e6-c811-aef4-ee7f" type="rule"/>
+        <infoLink id="526a-2a8d-5085-c69b" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="12fd-75dd-a80f-4abd" name="Beam" hidden="false" targetId="416c-f81b-c698-5f02" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="3.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="28df-111d-3305-ece5" name="Wildflower" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="9411-c84b-1f14-61e1" name="Wildflower" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">-</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <infoLinks>
-        <infoLink id="0e58-c89a-0aa9-1ce6" name="Eruption" hidden="false" targetId="fbcf-7d2a-48f0-4286" type="rule"/>
+        <infoLink id="0e58-c89a-0aa9-1ce6" name="Eruption" hidden="false" targetId="7ad9-2c28-d741-da94" type="rule"/>
       </infoLinks>
       <costs>
-        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="2.0"/>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="a69e-85de-6f7e-c93a" name="Rock Buster" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="b3d2-6646-b0ac-7431" name="Rock Buster" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">2</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="47e1-15e4-07eb-700e" name="Melee" hidden="false" targetId="6c5c-9284-ad97-ece8" type="rule"/>
+        <infoLink id="885e-e5c3-843a-cb07" name="Kinetic" hidden="false" targetId="9e4e-f8cd-00eb-cad9" type="rule"/>
+        <infoLink id="f889-8249-9f3c-66e1" name="Armor Piercing" hidden="false" targetId="4a62-dd5f-b896-d12c" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1370-1442-954f-4994" name="Cyclone Cannon" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="59c8-2604-f080-32b7" name="Cyclone Cannon" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="8f79-46bd-ad87-74b3" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="4b82-db1e-c52e-1dd9" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+        <infoLink id="c9c8-9c3d-0121-e055" name="Strafe" hidden="false" targetId="77e6-c811-aef4-ee7f" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="177d-e828-357a-dec8" name="Vortex Missile" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="d5ed-45e6-1607-0c87" name="Vortex Missile" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule id="11f4-d746-1ea0-a519" name="Null Blast (Spike)" hidden="false">
+          <description>Immediately after hitting a target with this weapon, this model can spike once to clear 1 Arc from the model hit and from all models within 2&quot; of it.</description>
+        </rule>
+      </rules>
+      <infoGroups>
+        <infoGroup id="4942-dc1f-584c-4cab" name="Energy Type" hidden="false">
+          <infoLinks>
+            <infoLink id="3581-7b03-3117-4583" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+            <infoLink id="070a-0028-cc1c-b85e" name="Explosion" hidden="false" targetId="f7b6-783e-1ae9-465d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="6961-bf15-9b49-ec48" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="22e6-7312-979d-4404" name="Slug Cannon" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="4853-4263-e49f-190f" name="Slug Cannon" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">5</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink id="2bbc-a01f-e75b-ff99" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="e2c2-5fc8-9716-67f2" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+        <infoLink id="d20d-f402-c29f-aa4f" name="Repulsor" hidden="false" targetId="83ee-82fd-698b-c4e6" type="rule"/>
+        <infoLink id="f091-c0f1-3729-6eb8" name="Turret" hidden="false" targetId="fdfc-0a81-546d-2c31" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="e185-7f38-64a3-5dfe" name="Talon Mk II" hidden="false" collective="false" import="true" type="upgrade">
+      <profiles>
+        <profile id="e332-374f-ebeb-9bfc" name="Talon Mk II" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
+          <characteristics>
+            <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
+            <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoGroups>
+        <infoGroup id="a2cd-0290-1ddc-f711" name="Energy Type" hidden="false">
+          <infoLinks>
+            <infoLink id="8ab8-e0c8-8162-7643" name="Ballistic" hidden="false" targetId="4c03-2674-46a3-4674" type="rule"/>
+            <infoLink id="bbf3-68b0-c4ee-ce81" name="Explosion" hidden="false" targetId="f7b6-783e-1ae9-465d" type="rule"/>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <infoLinks>
+        <infoLink id="d31e-89bc-7ce9-d4c4" name="Ranged" hidden="false" targetId="15d3-b3f8-98ef-48bc" type="rule"/>
+        <infoLink id="57d4-9e3c-6c7a-dfd6" name="Anti-Air" hidden="false" targetId="8758-53ba-60e8-19ab" type="rule"/>
+        <infoLink id="10c2-2252-79e0-32ae" name="Mechanikal Optics (Charge)" hidden="false" targetId="7995-7ab0-c3da-f21e" type="rule"/>
+        <infoLink id="af19-858a-1eed-3022" name="Turret" hidden="false" targetId="fdfc-0a81-546d-2c31" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="Weapon Points" typeId="ecbb-d452-36d4-0214" value="0.0"/>
       </costs>
     </selectionEntry>
   </sharedSelectionEntries>
-  <sharedProfiles>
-    <profile id="da9e-e7f3-bd55-b883" name="Combat Blade" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830"/>
-      </characteristics>
-    </profile>
-    <profile id="f54d-f3a0-98f9-4a16" name="Handgun" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830"/>
-      </characteristics>
-    </profile>
-    <profile id="0ee5-8bc2-a046-94ba" name="Battle Rifle" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Mechanikal Optics (Charge)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c08c-1fef-6c35-56f9" name="Null Detonator" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Energy</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">6</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">-</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Nullifier</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a7eb-f0e9-f06e-de5d" name="Fusion Blade" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830"/>
-      </characteristics>
-    </profile>
-    <profile id="b5f5-c5af-2b1d-db71" name="Ripper" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">2</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830"/>
-      </characteristics>
-    </profile>
-    <profile id="a099-d402-794a-98f5" name="Talon Rocket Pod" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic and Explosion</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Blast Weapon</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9c57-7e77-2600-e924" name="Rail Gun" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">18</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">5</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Arc Booster (Spike)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="d62d-05b1-b29b-d144" name="Flame Thrower" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Fire</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">10</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Spray Weapon</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b4dc-c2f5-7af3-717f" name="Sniper Rifle" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">15</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Arc Booster (Spike)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="bb53-9901-54b9-acb5" name="Battle Staff" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Repulsor</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="85c7-d579-c25d-9aed" name="Fusion Drill" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">5</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830"/>
-      </characteristics>
-    </profile>
-    <profile id="31a2-bac3-73c8-e7fe" name="Particle Cannon" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Energy</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">6</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Explosive Collapse</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ab3d-c807-a789-e8cc" name="Fusion Torch" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Beam</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">High Intensity (Charge)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="cb9e-0215-1cf9-2dc5" name="Wrench" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830"/>
-      </characteristics>
-    </profile>
-    <profile id="c2ec-3d61-5328-0177" name="Talon Rocket Launcher" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">12</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Blast Weapon, Targeter (Charge)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1ad5-cbfa-6279-0f86" name="Arclock Pistol" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">10</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Attack Mode (Arclock Pistol)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="452f-bab9-547c-6535" name="Impaler" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Kinetic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Melee</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">1</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">2</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Armor-Piercing</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="477f-11ea-1ce7-0b2f" name="Particle Accelerator" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Beam</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">1</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">High Intensity (Charge)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8904-f5d5-d3c3-2fe2" name="Slug Gun" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Ballistic</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">8</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">3</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Repulsor</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="62dc-52d7-5d0d-7b1b" name="Blazer" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
-      <characteristics>
-        <characteristic name="DMG" typeId="bd77-31aa-5209-2b6c">Beam</characteristic>
-        <characteristic name="TYP" typeId="684a-ebe0-b4ae-1d02">Ranged</characteristic>
-        <characteristic name="RNG" typeId="a6dd-0c75-98a7-e08a">14</characteristic>
-        <characteristic name="POW" typeId="9750-e740-35f4-1cf6">4</characteristic>
-        <characteristic name="Rules" typeId="b9f6-e564-4386-9830">Fire, Strafe</characteristic>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
+  <sharedRules>
+    <rule id="7995-7ab0-c3da-f21e" name="Mechanikal Optics (Charge)" hidden="false">
+      <description>While this model is charged, this weapon gains +4 RNG.</description>
+    </rule>
+    <rule id="1a75-dcac-9578-c7f9" name="Cleave" hidden="false">
+      <description>If this model destroys an enemy model with an attack made with this weapon, it can immediately make an additional attack with this weapon. Attacks granted by Cleave cannot generate further additional attacks.</description>
+    </rule>
+    <rule id="a339-fbad-c256-4d89" name="Arc Booster (Spike)" hidden="false">
+      <description>When attacking with this weapon, before making a damage roll, this model can spike to cause the target of the attack to suffer -1 ARM until the attack is resolved.</description>
+    </rule>
+    <rule id="7ad9-2c28-d741-da94" name="Eruption" hidden="false">
+      <description>When this model chooses to use Eruption it makes its attacks during its activation. If it does so, all other models within 3&quot; of it each suffer a POW 3 explosion damage roll.</description>
+    </rule>
+    <rule id="8758-53ba-60e8-19ab" name="Anti-Air" hidden="false">
+      <description>When attacking modeles with Flight with this weapon, add two ACTION dice to attack rolls.</description>
+    </rule>
+    <rule id="51e5-2ce6-9605-ac40" name="Maelstrom Activator (Spike)" hidden="false">
+      <description>During this unit&apos;s activation, immediately after completing its attacks this model can spike to make one additional attack with each of its weapons.</description>
+    </rule>
+    <rule id="235c-e23b-4228-be38" name="Guns Ready" hidden="false">
+      <description>When an enemy model moves into the area within 10&quot; of the Razorbat and ends it&apos;s movement, the Razorbat can make one attack targeting the enemy model. The maneuver expires at the start of this units next activation, or immediately after this model makes an attack as the result of Guns Ready.</description>
+    </rule>
+    <rule id="dcdf-5590-dfa6-a721" name="Hit the Jump" hidden="false">
+      <description>The Razorbat gains Flight this activation. This maneuver expires at the end of this activation.</description>
+    </rule>
+    <rule id="6049-7ae2-4745-66d9" name="Stand and Deliver" hidden="false">
+      <description>The Razorbot cannot advance this activation. The Razorbat adds one POWER die to ranged attack rolls. This maneuver expires at the end of this activation.</description>
+    </rule>
+    <rule id="fdfc-0a81-546d-2c31" name="Turret" hidden="false">
+      <description>The model gains +1 RAT when resolving attack rolls for this weapon.</description>
+    </rule>
+  </sharedRules>
 </catalogue>
