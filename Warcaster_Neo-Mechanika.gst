@@ -577,6 +577,10 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="650a-04d7-edb6-5539" name="Fusion Blade" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="519e-5a3e-1cd3-7f85" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="70d6-04a6-057f-d581" type="max"/>
+          </constraints>
           <profiles>
             <profile id="8362-1ca6-cf24-4ed3" name="Fusion Blade" hidden="false" typeId="3601-946f-42f1-0f5c" typeName="Weapon">
               <characteristics>
