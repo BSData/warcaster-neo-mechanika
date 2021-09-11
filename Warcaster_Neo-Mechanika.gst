@@ -5,7 +5,7 @@
     <publication id="216d-9058-fe0b-7be3" name="Collision Course" shortName="Collision Course" publisher="KS2"/>
   </publications>
   <costTypes>
-    <costType id="ecbb-d452-36d4-0214" name="Weapon Points" defaultCostLimit="-1.0" hidden="false"/>
+    <costType id="ecbb-d452-36d4-0214" name="Weapon Points" defaultCostLimit="-1.0" hidden="true"/>
   </costTypes>
   <profileTypes>
     <profileType id="5643-55ad-cf84-ac2a" name="Solo">
@@ -89,6 +89,33 @@
     <forceEntry id="9d06-65d5-e823-50f0" name="Skirmish" hidden="false">
       <categoryLinks>
         <categoryLink id="167a-969b-aad1-3235" name="Heroes" hidden="false" targetId="cc26-f6fc-643b-1352" primary="false">
+          <modifiers>
+            <modifier type="increment" field="3996-757a-d8be-9334" value="1.0">
+              <conditions>
+                <condition field="selections" scope="63b7-c3cd-7f99-1cf0" value="7.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3996-757a-d8be-9334" value="4.0">
+              <conditions>
+                <condition field="selections" scope="63b7-c3cd-7f99-1cf0" value="4.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3996-757a-d8be-9334" value="2.0">
+              <conditions>
+                <condition field="selections" scope="63b7-c3cd-7f99-1cf0" value="6.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3996-757a-d8be-9334" value="3.0">
+              <conditions>
+                <condition field="selections" scope="63b7-c3cd-7f99-1cf0" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="3996-757a-d8be-9334" value="5.0">
+              <conditions>
+                <condition field="selections" scope="63b7-c3cd-7f99-1cf0" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3996-757a-d8be-9334" type="max"/>
           </constraints>
@@ -120,6 +147,18 @@
     <forceEntry id="5e10-96ff-285b-2422" name="Full Battleforce" hidden="false">
       <categoryLinks>
         <categoryLink id="ea00-7c5c-4785-47f5" name="Heroes" hidden="false" targetId="cc26-f6fc-643b-1352" primary="false">
+          <modifiers>
+            <modifier type="increment" field="f0a8-71db-70a6-41b9" value="2.0">
+              <conditions>
+                <condition field="selections" scope="63b7-c3cd-7f99-1cf0" value="13.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="equalTo"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" field="f0a8-71db-70a6-41b9" value="1.0">
+              <conditions>
+                <condition field="selections" scope="63b7-c3cd-7f99-1cf0" value="14.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="any" type="equalTo"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f0a8-71db-70a6-41b9" type="max"/>
           </constraints>
