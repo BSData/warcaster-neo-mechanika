@@ -955,7 +955,6 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="dd9a-aaaa-502e-b7aa" name="New CategoryLink" hidden="false" targetId="cc26-f6fc-643b-1352" primary="true"/>
-        <categoryLink id="6134-a94c-4668-1be4" name="Units" hidden="false" targetId="63b7-c3cd-7f99-1cf0" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="1bd1-6561-3ed8-ae2e" name="Plasma Spear" hidden="false" collective="false" import="true" type="upgrade">
